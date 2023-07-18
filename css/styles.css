@@ -166,10 +166,10 @@ img {
     /*/por el linear gradient*/
   }
 }
-@media (min-width:1600px) {
-    .sobre-tech{
-        background-size: 100%,200rem;
-    }
+@media (min-width: 1600px) {
+  .sobre-tech {
+    background-size: 100%, 200rem;
+  }
 }
 .sobre-tech-grid {
   display: grid;
@@ -182,7 +182,7 @@ img {
     row-gap: unset;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 4rem;
-    padding: calc(var(--separacion)*2);
+    padding: calc(var(--separacion) * 2);
   }
 }
 .texto-sobre-tech {
@@ -193,13 +193,102 @@ img {
   justify-content: space-evenly;
   padding-bottom: var(--separacion);
 }
-@media (min-width:768px) {
-    .texto-sobre-tech{
-        padding-bottom: 0;
-    }
+@media (min-width: 768px) {
+  .texto-sobre-tech {
+    padding-bottom: 0;
+  }
 }
 .texto-sobre-tech p {
   font-size: 2rem;
   color: var(--blanco);
   line-height: 2;
+}
+
+/*Modelos*/
+.modelo {
+  padding: var(--separacion);
+}
+.header-modelos {
+  font-size: 6rem;
+  margin-top: var(--separacion);
+}
+.listado-modelos {
+  display: flex;
+  flex-direction: column-reverse;
+}
+@media (min-width:768px) {
+    .listado-modelos{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+      
+        gap: 2rem;
+    };
+    
+
+}
+.modelo {
+  background-color: var(--grisClaro);
+  margin-bottom: 2rem;
+  padding-left: 4rem;
+  color: var(--primario);
+  border-radius: 2rem;
+  min-height: 20rem;
+  background-repeat: no-repeat;
+  background-position: 90% center;
+  background-size: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition-property: transform background-size;
+  transition-duration: .3s;
+}
+.modelo:hover{
+    transform: scale(1.1);
+    background-size: 30rem;
+}
+.modelo h3 {
+  font-size: 2.4rem;
+}
+.modelo .precio {
+  font-size: 4rem;
+  font-weight: 900;
+  margin: 0;
+}
+.modelo:first-of-type {
+  margin-bottom: 0;
+}
+.modelo-y {
+  background-image: url(../img/modelo-y.svg);
+}
+.modelo-x {
+  background-image: url(../img/modelo-x.svg);
+  
+}
+.modelo-z {
+    background-image: url(../img/modelo-z.svg);
+  background-color: #1073ba;
+  color: #fff;
+}
+@media (min-width:768px) {
+    .modelo-z{
+        grid-column: 2/3;
+        grid-row: 1/3;
+        
+    }
+    .modelo-z h3 {
+        font-size: 6rem;
+    }
+}
+.modelo-z{
+    grid-column: 2/3;
+    grid-row: 1/3;
+    
+}
+.modelo-z .precio {
+  font-size: 6rem;
+  font-weight: 900;
+}
+/*newsletters*/
+.newsletters{
+    
 }
